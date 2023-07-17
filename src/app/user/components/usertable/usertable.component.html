@@ -1,0 +1,16 @@
+<table id="table1">
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>Email</td>
+      <td>Permissões</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.roles }}</td>
+    </tr>
+  </tbody>
+</table>

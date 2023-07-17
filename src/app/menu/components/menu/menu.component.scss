@@ -1,0 +1,16 @@
+.links-style{
+    margin: 80px 250px 20px;
+}
+
+.links-style a{
+    background-color: blue;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.links-style a:hover{
+    border: 3px solid black;
+    font-weight: bold;
+}
