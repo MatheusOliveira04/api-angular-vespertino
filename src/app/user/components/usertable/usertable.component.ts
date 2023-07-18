@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 
@@ -14,8 +14,21 @@ export class UsertableComponent implements OnInit {
 
   ngOnInit(): void {
       this.service.listAll().subscribe((data) => {
-        this.service.users = data;
-        this.users = this.service.users;
+        this.service.usersSubject.next(data);
+        this.users = data;
+      });
+    }
+
+    selectUser(user: User){
+      let userObj = Object.create(user);
+      this.service.selectUser(userObj);
+    }
+
+    public delete(user: User){
+      this.service.delete(user).subscribe(() =>{
+        this.service.listAll().subscribe((data) =>{
+          this.users = data;
+        });
       });
     }
   }

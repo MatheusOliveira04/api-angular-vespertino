@@ -1,0 +1,18 @@
+<div class="format-table">
+  <table id="table1">
+    <thead>
+      <tr>
+        <td colspan="2">Name:</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <td>{{ country.name }}</td>
+        <td class="format-buttom">
+          <button id="imgEdit"></button>
+          <button id="imgDelete"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

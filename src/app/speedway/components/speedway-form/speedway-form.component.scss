@@ -20,7 +20,7 @@
     border-bottom: 4px solid red;
 }
 
-.format button{
+.format #btn-img{
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14o693QCH-sEABqA0FV-DQn-bFeBmSns_8OIuJDzTBg&s);
     background-size: cover;
     height: 20px;
@@ -28,17 +28,10 @@
     border-radius: 50%;
 }
 
-.radio-style {
+.button-style,
+.select-style {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.button-style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .button-style button{
@@ -52,4 +45,10 @@
 .button-style button:hover{
     color: aliceblue;
     background-color: darkblue;
+}
+
+.select-style select{
+    border: 2px solid black;
+    width: 200px;
+    margin: 0 0 20px 10px;
 }
