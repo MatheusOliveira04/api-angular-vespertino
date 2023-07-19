@@ -1,54 +1,94 @@
 .format {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 30px;
-  }
-
-.format input{
-    border: none;
-    border-bottom: 4px solid blue;
-    margin: 20px 0;
-    padding: 10px;
-    width: 500px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 30px;
 }
 
-.format input:focus{
-    font-weight: bold;
-    color: blue;
-    border-bottom: 4px solid red;
+.format input {
+  border: none;
+  border-bottom: 4px solid blue;
+  margin: 20px 0;
+  padding: 10px;
+  width: 500px;
 }
 
-.format #btn-img{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14o693QCH-sEABqA0FV-DQn-bFeBmSns_8OIuJDzTBg&s);
-    background-size: cover;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
+.format input:focus {
+  border-bottom: 4px solid red;
+  color: blue;
+  font-weight: bold;
+}
+
+.format #btn-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14o693QCH-sEABqA0FV-DQn-bFeBmSns_8OIuJDzTBg&s);
+  background-size: cover;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
 }
 
 .button-style,
 .select-style {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.button-style button{
-    background-color: blue;
-    border-radius: 10px;
-    margin: 5px 0 10px;
-    padding: 10px;
-    width: 200px;
+.button-style{
+    margin-top: 10px;
 }
 
-.button-style button:hover{
-    color: aliceblue;
-    background-color: darkblue;
+.button-style #button-speedwayInsert {
+  background-color: blue;
+  border-radius: 10px;
+  margin: 5px 0 10px;
+  padding: 10px;
+  width: 200px;
 }
 
-.select-style select{
-    border: 2px solid black;
-    width: 200px;
-    margin: 0 0 20px 10px;
+.button-style #button-speedwayInsert:hover {
+  color: aliceblue;
+  background-color: darkblue;
+}
+
+.select-style select {
+  border-bottom: 2px solid blue;
+  border-right: 2px solid blue;
+  border-top: none;
+  border-left: none;
+  padding: 5px;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.select-style label {
+  border-bottom: 2px solid blue;
+  border-left: 2px solid blue;
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.button-style #button-filter {
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 5px;
+  padding: 4px 15px;
+}
+
+.button-style #button-filter:hover{
+    color: white;
+    background-color: darkred;
+}
+
+.filter-block{
+  background-color: black;
+  border-radius: 10px;
+  bottom: 450px;
+  color: white;
+  height: 200px;
+  left: 1050px;
+  position: absolute;
+  width: 450px;
 }

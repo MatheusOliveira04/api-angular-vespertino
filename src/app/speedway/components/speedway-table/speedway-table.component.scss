@@ -1,0 +1,31 @@
+#table1{
+    border: 4px solid black;
+    box-shadow: 10px 10px 5px black;
+    overflow-y: scroll;
+    width: 90%;
+}
+
+#table1 thead{
+    background-color: bisque;
+    font-size: 30px; 
+    font-weight: bolder;
+}
+
+button{
+    border-radius: 50%;
+    height: 25px;
+    margin-right: 10px;
+    width: 25px;
+}
+
+#imgEdit{
+    background-color: green;
+    background-image: url(https://cdn.icon-icons.com/icons2/931/PNG/512/edit_modify_icon-icons.com_72390.png);
+    background-size: cover;
+   
+}
+
+#imgDelete{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUWJHo49GpzTbgYknD7Pu--Ad1izglVj8bxQ&usqp=CAU);
+    background-size: cover;
+}

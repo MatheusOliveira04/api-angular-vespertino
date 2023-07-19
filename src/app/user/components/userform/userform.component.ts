@@ -23,12 +23,15 @@ export class UserformComponent implements OnInit {
     if(this.user.id){
       this.service.update(this.user).subscribe((data) => {
         this.user = {} as User;
-        
       });
     } else {
       this.service.insert(this.user).subscribe((data) => {
         this.user= {} as User;
       });
     }
+  }
+
+  public getUsersByName(){
+    this.service.getUsersByName(this.user.name);
   }
 }

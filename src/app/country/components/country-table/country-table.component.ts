@@ -14,7 +14,6 @@ export class CountryTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.listAll().subscribe((data) => {
-      this.service.countriesSubject.next(data);
       this.countries = data;
     });
   }

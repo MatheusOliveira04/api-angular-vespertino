@@ -1,17 +1,27 @@
 <div class="format">
   <div>
-    <input type="text" placeholder="name" />
-    <button id="btn-img"></button>
+    <input type="text" placeholder="name" [(ngModel)]="speedway.name"/>
+    <br>
+    <input type="number" placeholder="tamanho" [(ngModel)]="speedway.size"/>
 
     <div class="select-style">
       <label for="countryId">País</label>
-      <select name="country" id="countryId">
-        <option value="teste">Teste</option>
-        <option value="teste2">Teste2</option>
+      <select name="country" id="countryId" (click)="listAllCountry()" [(ngModel)]="speedway.country">
+        <option value="" selected disabled>Selecione um país</option>
+        <option *ngFor="let country of countryList" [ngValue]="country"> {{ country.name }}</option>
       </select>
     </div>
     <div class="button-style">
-      <button>Salvar</button>
+      <button id="button-speedwayInsert" (click)="speedwayInsert()">Salvar</button>
+      <button id="button-filter" (click)="filterButtonMethod()">filtrar</button>
     </div>
+    
   </div>
 </div>
+<div *ngIf="filterButton" class="filter-block">
+  <input type="text" placeholder="Buscar por nome"/>
+  <br>
+  <input type="number" placeholder="tamanho incial"/>
+  <input type="number" placeholder="tamanho final"/>
+</div>
+   

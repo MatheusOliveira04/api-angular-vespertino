@@ -14,7 +14,6 @@ export class UsertableComponent implements OnInit {
 
   ngOnInit(): void {
       this.service.listAll().subscribe((data) => {
-        this.service.usersSubject.next(data);
         this.users = data;
       });
     }
@@ -31,6 +30,8 @@ export class UsertableComponent implements OnInit {
         });
       });
     }
+
+
   }
 
  

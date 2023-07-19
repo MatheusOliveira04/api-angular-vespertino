@@ -1,1 +1,20 @@
-<p>speedway-table works!</p>
+<table id="table1">
+    <thead>
+      <tr>
+        <td>Nome</td>
+        <td>Tamanho</td>
+        <td colspan="2">País da pista</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let speedway of speedways">
+        <td>{{ speedway.name }}</td>
+        <td>{{ speedway.size }}</td>
+        <td>{{ speedway.country.name }}</td>
+        <td>
+          <button id="imgEdit" (click)="selectSpeedway(speedway)"></button>
+          <button id="imgDelete" (click)="delete(speedway)"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
