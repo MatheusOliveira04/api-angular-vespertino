@@ -42,6 +42,16 @@ export class SpeedwayFormComponent implements OnInit{
     }
   }
 
+  public getByNameStartsWith(name: string){
+    this.service.getByNameStartsWith(name);
+  }
+
+  public findBySizeBetween(sizeIniStr: string, sizeFinStr: string){
+    const sizeIni = parseInt(sizeIniStr, 10);
+    const sizeFin = parseInt(sizeFinStr, 10);
+    this.service.findBySizeBetween(sizeIni, sizeFin);
+  }
+
   public filterButtonMethod(){
     this.filterButton = !this.filterButton;
   }

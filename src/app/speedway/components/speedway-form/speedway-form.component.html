@@ -1,27 +1,47 @@
 <div class="format">
   <div>
-    <input type="text" placeholder="name" [(ngModel)]="speedway.name"/>
-    <br>
-    <input type="number" placeholder="tamanho" [(ngModel)]="speedway.size"/>
+    <input type="text" placeholder="name" [(ngModel)]="speedway.name" />
+    <br />
+    <input type="number" placeholder="tamanho" [(ngModel)]="speedway.size" />
 
     <div class="select-style">
       <label for="countryId">País</label>
-      <select name="country" id="countryId" (click)="listAllCountry()" [(ngModel)]="speedway.country">
+      <select
+        name="country"
+        id="countryId"
+        (click)="listAllCountry()"
+        [(ngModel)]="speedway.country"
+      >
         <option value="" selected disabled>Selecione um país</option>
-        <option *ngFor="let country of countryList" [ngValue]="country"> {{ country.name }}</option>
+        <option *ngFor="let country of countryList" [ngValue]="country">
+          {{ country.name }}
+        </option>
       </select>
     </div>
     <div class="button-style">
-      <button id="button-speedwayInsert" (click)="speedwayInsert()">Salvar</button>
+      <button id="button-speedwayInsert" (click)="speedwayInsert()">
+        Salvar
+      </button>
       <button id="button-filter" (click)="filterButtonMethod()">filtrar</button>
     </div>
-    
   </div>
 </div>
 <div *ngIf="filterButton" class="filter-block">
-  <input type="text" placeholder="Buscar por nome"/>
-  <br>
-  <input type="number" placeholder="tamanho incial"/>
-  <input type="number" placeholder="tamanho final"/>
+  <div>
+    <input
+      type="text"
+      placeholder="Buscar por nome"
+      #name
+      (input)="getByNameStartsWith(name.value)"
+    />
+  </div>
+  <div>
+    <input type="number" placeholder="tamanho incial" #sizeIni />
+    <input type="number" placeholder="tamanho final" #sizeFin />
+  </div>
+  <div>
+    <button (click)="findBySizeBetween(sizeIni.value, sizeFin.value)">
+      filtrar tamanho
+    </button>
+  </div>
 </div>
-   

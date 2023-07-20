@@ -27,6 +27,18 @@ export class SpeedwayService {
     return this.speedwaysSubject.asObservable();
   }
 
+  public getByNameStartsWith(name: string): Observable<Speedway[]>{
+    this.http.get<Speedway[]>(`${this.urlBase}/name/${name}`)
+    .subscribe((data) => this.speedwaysSubject.next(data));
+    return this.speedwaysSubject.asObservable();
+  }
+
+  public findBySizeBetween(sizeIni: number, sizeFin: number): Observable<Speedway[]>{
+    this.http.get<Speedway[]>(`${this.urlBase}/size/${sizeIni}/${sizeFin}`)
+    .subscribe((data) => this.speedwaysSubject.next(data));
+    return this.speedwaysSubject.asObservable();
+  } 
+
   public delete(speedway: Speedway): Observable<void>{
     return this.http.delete<void>(`${this.urlBase}/${speedway.id}`);
   }

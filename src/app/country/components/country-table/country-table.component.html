@@ -9,8 +9,8 @@
       <tr *ngFor="let country of countries">
         <td>{{ country.name }}</td>
         <td class="format-buttom">
-          <button id="imgEdit"></button>
-          <button id="imgDelete"></button>
+          <button id="imgEdit" (click)="selectCountry(country)"></button>
+          <button id="imgDelete" (click)="delete(country)"></button>
         </td>
       </tr>
     </tbody>

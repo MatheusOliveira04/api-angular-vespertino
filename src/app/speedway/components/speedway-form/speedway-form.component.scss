@@ -83,12 +83,38 @@
 }
 
 .filter-block{
+  align-items: center;
   background-color: black;
   border-radius: 10px;
   bottom: 450px;
   color: white;
+  display: flex;
+  flex-wrap: wrap;
   height: 200px;
-  left: 1050px;
+  justify-content: center;
+  left: 1000px;
   position: absolute;
-  width: 450px;
+  width: 400px;
+}
+
+.filter-block div{
+  flex-direction: column;
+}
+
+.filter-block input,
+.filter-block button{
+  background-color: rgb(49, 48, 48);
+  border: 3px solid darkslateblue;
+  border-radius: 10px;
+  color: white;
+  margin: 2px 0 0 5px;
+  padding: 8px;
+}
+
+.filter-block button:hover{
+  font-weight: bold;
+}
+
+.filter-block button:active{
+  padding: 10px;
 }

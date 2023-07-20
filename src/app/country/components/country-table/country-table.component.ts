@@ -17,4 +17,17 @@ export class CountryTableComponent implements OnInit {
       this.countries = data;
     });
   }
+
+  selectCountry(country: Country){
+    let countryObj = Object.create(country);
+    this.service.selectCountry(countryObj);
+  }
+
+  public delete(country: Country){
+    this.service.delete(country).subscribe(() => {
+      this.service.listAll().subscribe((data) => {
+        this.countries = data;
+      });
+    });
+  }
 }
