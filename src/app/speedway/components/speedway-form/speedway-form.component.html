@@ -36,8 +36,8 @@
     />
   </div>
   <div>
-    <input type="number" placeholder="tamanho incial" #sizeIni />
-    <input type="number" placeholder="tamanho final" #sizeFin />
+    <input type="number" placeholder="tamanho incial" #sizeIni min="0"/>
+    <input type="number" placeholder="tamanho final" #sizeFin min="1"/>
   </div>
   <div>
     <button (click)="findBySizeBetween(sizeIni.value, sizeFin.value)">

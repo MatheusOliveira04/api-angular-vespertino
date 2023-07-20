@@ -6,7 +6,6 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class GlobalService {
-
   constructor(private http: HttpClient) { }
 
   public token: string = 'Bearer ';

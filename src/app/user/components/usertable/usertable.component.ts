@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
+import { GlobalService } from 'src/app/global.service';
 
 @Component({
   selector: 'app-usertable',
@@ -9,14 +10,19 @@ import { User } from '../../models/user';
 })
 export class UsertableComponent implements OnInit {
   public users!: User[];
+  public loginToken = {
+    email: "usuario01@gmail.com",
+    password: "12345"
+  };
 
-  constructor(private service: UserService) {}
+  constructor(private service: UserService, private globalService: GlobalService) {}
 
   ngOnInit(): void {
       this.service.listAll().subscribe((data) => {
         this.users = data;
       });
-    }
+  }
+
 
     selectUser(user: User){
       let userObj = Object.create(user);
@@ -24,14 +30,12 @@ export class UsertableComponent implements OnInit {
     }
 
     public delete(user: User){
-      this.service.delete(user).subscribe(() =>{
-        this.service.listAll().subscribe((data) =>{
+      this.service.delete(user).subscribe(() => {
+        this.service.listAll().subscribe((data) => {
           this.users = data;
         });
       });
     }
-
-
   }
 
  

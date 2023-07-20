@@ -10,10 +10,11 @@ import { MenuModule } from './menu/menu.module';
 import { UserModule } from './user/user.module';
 import { CountryModule } from './country/country.module';
 import { SpeedwayModule } from './speedway/speedway.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import { SpeedwayModule } from './speedway/speedway.module';
     MenuModule,
     UserModule,
     CountryModule,
-    SpeedwayModule
+    SpeedwayModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
